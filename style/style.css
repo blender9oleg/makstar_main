@@ -1,0 +1,1215 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* HIDEN MOBILE STYLES start*/
+
+
+.mobile_about{
+    display: none;
+}
+
+.mobile_contacts{
+    display: none;
+}
+
+.hamburger_menu{
+    display: none;
+}
+
+.mobile_headings{
+    display: none;
+}
+
+.menu__box{
+    display: none;
+}
+
+#menu__toggle{
+    display: none;
+}
+
+.menu__btn{
+    display: none;
+}
+
+.burger_catalog{
+    display: none;
+}
+
+.mobile_temp_photo{
+    display: none;
+}
+
+.in_mobile_headings{
+    display: none;
+}
+
+.burger_article{
+    display: none;
+}
+
+.mobile_order_headings{
+    display: none;
+}
+
+/* HIDEN MOBILE STYLES end*/
+
+
+/** || FONTS START**/
+
+@font-face {
+    font-family: 'kharkiv';
+    src: url('../fonts/kharkiv_tone_04.10.2020-webfont.woff2') format('woff2'),
+         url('../fonts/kharkiv_tone_04.10.2020-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'lackregular';
+    src: url('../fonts/Lack-Regular.woff2') format('woff2'),
+         url('../fonts/Lack-Regular.woff') format('woff'),
+         url('../fonts/Lack-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'lackitalic';
+    src: url('../fonts/lack-italic-webfont.woff2') format('woff2'),
+         url('../fonts/lack-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'lack_lineregular';
+    src: url('../fonts/lack-line-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lack-line-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/**FONTS END**/
+
+
+/** || FONTS STYLES START**/
+
+h1{
+    /* Kharkiv Tone 48 */
+    font-family: 'kharkiv';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5vw;
+    line-height: 130%;
+    text-align: center;
+}
+
+h2{
+    /* Kharkiv Tone 36 */
+    font-family: 'kharkiv';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.875vw;
+    line-height: 100%;
+}
+
+
+h4{
+    /* Lack 18 italic */
+    font-family: 'lackregular';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.9375vw;
+    line-height: 125%;
+}
+
+
+p{
+    /* Lack 18 reg */
+    font-family: 'lackregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9375vw;
+    line-height: 135%;
+}
+
+h3{
+    /* Lack 14 reg */
+    font-family: 'lackregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.72vw;
+    line-height: 125%;
+}
+/** FONTS STYLES END**/
+
+
+/**MAIN STYLES START**/
+
+:root{
+    --main-gray: rgba(234, 234, 234, 1);
+    --trans: 3s;
+}
+
+body {
+    margin-left: 2vw; 
+    margin-right: 2vw;
+    animation: opacity_anim 300ms ease-out;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    background-color: var(--main-gray, rgba(234, 234, 234, 1) );
+   
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Safari disable scrollbar */
+}
+
+
+button{ /* Basic button style */
+    display: flex;
+    justify-self: start;
+    padding: 1.3vw;
+    background: var(--main-gray);
+    border: 0.05vw solid #000000;
+    box-sizing: border-box;
+    border-radius: 6vw;
+    transition: 0.3s ;
+}
+
+.button_php{
+    margin: 0 auto;
+}
+.link_php{
+    margin: 0 auto;
+}
+
+button:hover{
+    filter: invert();
+    border: 0.05vw solid var(--main-gray);
+}
+
+.arrow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.35vw 1.3vw;
+    background-color: var(--main-gray) ;
+    border: 0.05vw solid #000000;
+    box-sizing: border-box;
+    border-radius: 2.6vw;
+    transition: 0.3s;
+    width: 3.5vw;
+    height: auto;
+}
+
+.arrow:hover{
+    filter: invert();
+    border: 0.05vw solid var(--main-gray);
+}
+
+a{
+    color: black;
+    text-decoration: transparent;
+    transition: 0.3s ease-out;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover{
+    color:orangered;
+}
+
+.logo{
+    width: auto;
+    height: 0.8vw;
+    display: flex;
+}
+
+/**MAIN STYLES END**/
+
+
+
+
+/**INPUT STYLES START**/
+
+/**fields+select**/
+
+input[type=text], input[type=tel], input[type=email] {
+
+    width: 100%;
+    padding: 0.5vw 0.5vw 0.15vw 1.3vw ;
+    margin-bottom: 1.5vw;
+    background: transparent;
+    border: none;
+    border-bottom: 0.13vw solid #000000; ;
+    box-sizing: border-box;
+    font-family: 'lackregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.875vw;
+    line-height: 125%;
+}
+
+select{
+    display: block;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.4vw;
+    margin-left: 0.7vw;
+    background-color: var(--main-gray) ;
+    border: 0.05vw solid #000000;
+    box-sizing: border-box;
+    border-radius: 2.6vw;
+    font-family: 'lackregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9375vw;
+    line-height: 125%;
+}
+
+/**input fill delay/ затримка заливки кольором при автозаповненні**/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/** ANIMATIONS start**/
+
+@keyframes opacity_anim{
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+/** ANIMATIONS end**/
+
+
+/** LIST // Розділи сайту**/
+
+.index__list{
+    display: grid;
+    height: 17.5vw;
+    width: 90vw;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+
+/* CONTACT START Зв'язок*/
+
+.centered_contact{
+    display: grid;
+    height: 9vw;
+    align-content: space-around;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 96vw;
+}
+
+.desktop_about{
+    width: 75vw;
+}
+
+/* CONTACT END*/
+
+
+
+/* NAV START/ 
+НАВІГАЦІЯ+ЯКІР+ВИПАДАЮЧЕ для каталогу
+ГОЛОВНИЙ ХЕДЕР!!! */
+
+/* grid for catalog header/сітка для хедера в каталозі*/
+.catalog__header{
+    display: grid;
+    height: 2vw;
+    grid-template-columns: 20% 5% 19% 11% 16% 18.5% 10.5%;
+    grid-template-rows: repeat(1, 1fr);
+    align-items:center;
+    position: fixed;
+    width: 96vw;
+    margin-top: 2.22vw;
+    z-index: 1;   
+}
+
+.logo{
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+
+/* internal links/лінки внутрішні*/
+.catalog__links{
+    grid-area: 1 / 7 / span 1 / span 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/**arrow / положення для стілки назад**/
+.nav_arrow{
+    height: auto;
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+/**випадаюче старт**/
+.dropdown{
+    grid-area: 1 / 3 / span 1 / span 1;
+    display: flex;
+    justify-self: flex-end;
+}
+
+.dropdown_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    opacity: 0%;
+    width: 7vw;
+    height: 4vw;
+}
+
+.dropdown:hover .dropdown_content {
+    margin-top: 1.3vw;
+    visibility: visible;
+    opacity: 100%;
+}
+/**випадаюче кінець**/
+
+
+/**нумерація start **/
+.number_of_item{
+    grid-area: 1 / 5 / span 1 / span 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.num1, .num2, .num3, .num4{
+    padding: 0.25vw 1vw;
+    background: var(--main-gray);
+    border: 0.05vw solid #000000;
+    box-sizing: border-box;
+    border-radius: 2.6vw;
+    transition: 0.3s;
+}
+
+/**якщо менше 4х товарів**/
+.num3_w, .num4_w{
+    padding: 0.25vw 1vw;
+    background: var(--main-gray);
+    border: 0.05vw solid #000000;
+    box-sizing: border-box;
+    border-radius: 2.6vw;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+.num1:hover, .num2:hover, .num3:hover, .num4:hover {
+    background: black;
+    color: white;
+}
+
+/**нумерація end **/
+
+
+/* NAV END */
+
+
+/* FOOTER START */
+
+.footer{
+    display: grid;
+    height: 2.5vw;
+    grid-template-columns: 43% 14% 43%;
+    grid-template-rows: repeat(2, 1fr);
+    position: fixed; 
+    bottom: 1.25vw;
+    width: 96vw;
+}
+
+.num{ /* +380665544123 */
+    display: flex;
+    align-items: flex-end;
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.location{ /* Львів, Україна */
+    display: flex;
+    align-items: flex-end;
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.social_links{ /* social_networks */
+    display: flex;
+    grid-area: 2 / 2 / span 1 / span 1;
+    align-items:flex-end;
+    justify-content: space-between;
+}
+
+.date{ /* Makstar, 2021 */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+
+.anchor_padding{ /**відступ для якорів**/
+    padding-top: 15vh;
+    padding-bottom: 6.9vh;
+}
+
+.incatalog_grid{ /**сітка для товару**/
+    display: grid;
+    height: 78vh;
+    width: 96vw;
+    grid-template-columns: 50% 5% 20% 5% 5% 15%;
+    grid-template-rows: repeat(3, 25%) 10% 15%;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+.incatalog_svg{ /**схема для товару**/
+    grid-area: 1 / 1 / span 5 / span 1;
+    width: 45vw;
+    height: auto;
+}
+
+.incatalog_image_hover{ /**зона, де при наведенні мишкою активується ховер**/
+    width: 41vw;
+    height: 52vh;
+    position: absolute;
+    margin-top: 7%;
+    background-color: none;
+    cursor: pointer;
+}
+
+.img_hover { /**зображення для ховеру**/
+    width: 82vh;
+    height: 82vh;
+    opacity: 0%;
+    position: relative;
+    visibility: hidden;
+    top: -30%;
+    
+    transition: all 60ms ease-out;
+    border-radius: 0.5vw;
+    z-index: 2;
+    object-fit: cover;
+}
+
+.incatalog_image_hover:hover .img_hover { /**сам ховер**/
+    opacity: 100%;
+    visibility: visible;
+}
+
+
+.incatalog_heading{ /**заголовки**/
+    grid-area: 1 / 3 / 1 / span 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.incatalog_price{ /**ціна**/
+    grid-area: 1 / 5 / 1 / span 2;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.incatalog_description{ /**опис**/
+    grid-area: 2 / 3 / 3 / span 3;
+}
+
+.incatalog_more_button{ /**детальніше**/
+    grid-area: 5 / 3 / span 1/ span 1;
+    display: flex;
+    align-self: flex-start;
+}
+
+.incatalog_buy_button{ /**замовити**/
+    grid-area: 5 / 4 / span 1 / span 3;
+    display: flex;
+    justify-self: center;
+    align-self: flex-start;
+}
+
+/* CATALOG END */
+
+
+
+/* ARTICLE START */
+
+.inarticle_flow{ /**сторінка товару
+                    +фотографії**/
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.7vw;
+    width: 96vw;
+    position: absolute;
+    height: 210vh;
+
+}
+
+.inarticle_grid{ /**сітка для опису товару**/
+    display: grid;
+    height: 39vw;
+    grid-template-columns: 3% 19% 4% 4% 15% 3% 52%; 
+    grid-template-rows: 10% 5% 20% 10% 30% 13% 12%;
+    margin-top: 4vw;
+    margin-bottom: 29.5vh;
+}
+
+.article__index__header{ /**шапка**/
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.inarticle_arrow{ /**arrow/ позиція стілки назад**/
+    grid-area: 1 / 1 / span 1 / span 1;
+    display: flex;
+    align-self: center;
+}
+
+.inarticle_heading{ /**заголовок розміщення**/
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.inarticle_price{ /**ціна розміщення**/
+    grid-area: 1 / 5 / span 1 / span 1;
+}
+
+
+.inarticle_heading, .inarticle_price{ /**заголовок і ціна стиль**/
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    height: 2.8vw;
+}
+
+.inarticle_description{ /**опис**/
+    grid-area: 3 / 1 / span 1 / span 4;
+    display: flex;
+    align-items: center;
+}
+
+.intable_names{ /**список категорії**/
+    grid-area: 5 / 1 / span 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.intable_values{ /**список значення**/
+    grid-area: 5 / 1 / span 1 / span 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: end;
+    word-wrap: none;
+}
+
+.lines{ /**лінії-розділювачі, розміщення**/
+    grid-area: 5 / 1 / span 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.line1, .line2, .line3, .line4{ /**лінії-розділювачі, стиль**/
+    width: 43.4vw;
+    height: 0.5vw;
+}
+
+.temp_scheme{  /**схема**/
+    width: 40vw;
+    height: auto;
+    grid-area: 1 / 7 / span 6 / span 1;
+    justify-self: center;
+
+}
+
+.inarticle_buy_button{ /**замовити**/
+    grid-area: 7 / 3 / span 1 / span 1;
+    justify-self: center;
+}
+
+.inarticle_photo_button{ /**кнопка-якір для фото**/
+    grid-area: 7 / 7 / span 1 / span 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.slides__container { /**контейнер для слайдів**/
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slides{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.big_images{ /**фотографія, стиль**/
+    height: 100vh;
+    width: 100%;
+    background-color: #EAEAEA;
+    display: flex;
+    object-fit: contain;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 44%;
+    width: auto;
+    padding: 1.5vw;
+    background-color: #eaeaea35;
+    border-radius: 0.5vw;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+}
+
+.prev{
+    left: 0;
+}
+
+.next_arrow{
+    transform: rotate(180deg);
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.145);
+}
+
+/* ARTICLE END
+кінець сторінки товару */
+
+
+
+/* ORDER START
+початок сторінки замовлення*/
+
+/**order header start**/
+.order__header{
+    display: grid;
+    height: 2vw;
+    grid-template-columns: repeat(4, 25%);
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 96vw;
+    margin-top: 2.25vw;
+    z-index: 1;
+}
+
+.arrow_order{
+    /**arrow**/
+    grid-area: 1 / 1 / span 1 / span 1;
+    display: flex;
+    justify-self: flex-start;
+}
+
+.logo_order{
+    grid-area: 1 / 4 / span 1 / span 1;
+    display: flex;
+    justify-self: flex-end;
+}
+
+.order_headings{
+    grid-area: 1 / 2 / span 1 / span 2;
+    display: flex;
+    align-self: center;
+    height: 60%;
+    justify-content: space-around;
+}
+/**order header end**/
+
+
+/**order main grid start**/
+.form_grid{ /**сітка форми**/
+    display: grid;
+    position: absolute;
+    width: 96vw;
+    height: 40vw;
+    margin-top: 2.6vw;
+    grid-template-columns: 30% repeat(4, 10%) 30%;
+    grid-template-rows: 8% 7% repeat(5, 1fr) 15%;
+}
+
+.main_form{ /**стиль форми**/
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    grid-area: 2 / 2 / span 4 / span 4;
+}
+
+.selector{ /**вибір часу**/
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    top: 62%;
+    left: 39%;
+    height: 3vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+.checkboxes{ /**розміщення чекбоксів**/
+    display: flex;
+    float: right;
+    width: 90%;
+    height: 3vw;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    grid-area: 7 / 2 / span 1 / span 4 ;
+}
+
+.button_order{ /**замовити**/
+    grid-area: 8 / 3 / span 1 / span 2;
+    position: absolute;
+    display: flex;
+    align-self: flex-end;
+    justify-self: center;
+    transition: background-color 0.3s;
+}
+
+.order_button:last-child{ /**змінюю стиль кнопки**/
+    color: white;
+    background-color: black;
+    border: solid #EAEAEA 0.05vw;
+    transition: background-color 0.3s;
+}
+
+.order_button:hover{
+    filter: none;
+    color: white;
+    background-color: orangered;
+    border: 0.05vw solid #EAEAEA;
+}
+
+.mail_only, .check_allow{
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+}
+
+input[type="checkbox"]{
+    margin-right: 0.6vw;
+    display: flex;
+}
+
+input[type="checkbox"]:checked{
+    margin-right: 0.6vw;
+    display: flex;
+    box-shadow: 0vw 0vw 0.5vw orangered;
+}
+
+.order_title{
+    display: none;
+}
+
+/**main grid end**/
+
+/* ORDER END */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>Order, S — 0170</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="keywords" content="Дивани, Меблі, Макстар">
+    <meta name="description" content="Студія дизайнерських меблів та аксесуарів.">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" media="(max-width: 700px)" href="/style/mobile.css">
+    <link rel="shortcut icon" href="/img/makstarico.png" type="image/png">
+</head>
+<body>
+    <script>
+        function goBack() {
+          window.history.back();
+        }
+    </script>
+    <header class="order__header">
+        <a class="logo_order" href="/index.html"><img class="logo" src="/logo/logo_main.svg"></a>
+        <img onclick="goBack()" class="arrow_order arrow" src="/img/Arrow.svg"></a>
+        <div class="order_headings">
+            <h2>S — 0170</h2>
+            <h2>від 16 000 грн.</h2>
+        </div>
+        <div class="mobile_order_headings">
+            <h1>S — 0170</h1>
+            <h2>від 16 000 грн.</h2>
+        </div>
+    </header>
+    <main class="form_grid">
+        <form class="form_grid" method="post" action="../php/email.php">
+            <fieldset class="main_form">
+                <label for="name"><p>Ім’я та Прізвище:</p></label>
+                <input type="text" id="idname" name="name" maxlength="25" pattern="^[\p{L}\s]+$" required>
+                <label for="email"><p>Email:</p></label>
+                <input type="email" id="idemail" name="email" required>
+                <label for="number"><p>Номер:</p></label>
+                <input type="tel" id="idnumber" name="number" pattern="^[\d ()+]+$" required>
+            </fieldset>
+            <fieldset class="selector" >
+                <label for="time_selector"><p class="test">Зручний час для дзвінка:</p></label>
+                <select name="time" id="time_selector">
+                    <option value="9-12">З 9 по 12</option>
+                    <option value="12-15">З 12 по 15</option>
+                    <option value="15-19">З 15 по 17</option>
+                    <option value="17-20">З 17 по 20</option>
+                </select>
+                <select name="title" class="order_title">
+                    <option value="S — 0170, від 16 000грн"></option>
+                </select>
+            </fieldset>
+            <fieldset class="button_order" >
+                <button class="order_button" type="submit" value="Замовлення" oninvalid="alert()"><h2>Замовлення</h2></button>   
+            </fieldset>
+               
+        </form>
+    </main>
+    <footer class="footer">
+        <h3 class="num">++380506351364</h3>
+        <h3 class="location">Львів, Україна</h3>
+        <h3 class="date">Makstar, 2021</h3>
+    </footer> 
+</body>
